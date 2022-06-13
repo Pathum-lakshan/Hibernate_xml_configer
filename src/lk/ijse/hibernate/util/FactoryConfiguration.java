@@ -10,4 +10,12 @@ package lk.ijse.hibernate.util;
 
 public class FactoryConfiguration {
 
+    private static FactoryConfiguration factoryConfiguration;
+
+    private FactoryConfiguration(){}
+
+    public static FactoryConfiguration getInstance(){
+        return (factoryConfiguration == null) ? factoryConfiguration=new FactoryConfiguration()
+                : factoryConfiguration;
+    }
 }
